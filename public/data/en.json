@@ -1,0 +1,11 @@
+{
+  "title": "What’s for lunch?",
+  "region": "Region",
+  "base": "Base",
+  "dal": "Dal",
+  "sabzi": "Vegetable",
+  "extras": "Extras",
+  "button_generate": "Generate Meal",
+  "wildcard": "Fusion Dish Added!",
+  "with_twist": "With a {region} twist!"
+}

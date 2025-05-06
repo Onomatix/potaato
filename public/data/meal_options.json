@@ -1,0 +1,205 @@
+{
+  "regions": {
+    "North Indian": {
+      "base": [
+        "Roti",
+        "Jeera Rice",
+        "Missi Roti",
+        "Tandoori Roti",
+        "Naan",
+        "Plain Paratha"
+      ],
+      "dal": [
+        "Dal Makhani",
+        "Moong Dal Tadka",
+        "Arhar Dal",
+        "Rajma",
+        "Chole",
+        "Urad Dal Fry"
+      ],
+      "sabzi": [
+        "Aloo Gobi",
+        "Bhindi Masala",
+        "Baingan Bharta",
+        "Matar Paneer",
+        "Lauki Ki Sabzi",
+        "Shahi Paneer"
+      ],
+      "extras": [
+        "Mango Pickle",
+        "Boondi Raita",
+        "Green Chutney",
+        "Onion Salad",
+        "Papad",
+        "Lassi"
+      ]
+    },
+    "South Indian": {
+      "base": [
+        "Steamed Rice",
+        "Lemon Rice",
+        "Coconut Rice",
+        "Curd Rice",
+        "Tamarind Rice",
+        "Ragi Mudde"
+      ],
+      "dal": [
+        "Sambar",
+        "Rasam",
+        "Paruppu",
+        "Tomato Pappu",
+        "Kootu",
+        "Vathal Kuzhambu"
+      ],
+      "sabzi": [
+        "Poriyal",
+        "Avial",
+        "Beans Thoran",
+        "Kootu Curry",
+        "Cabbage Palya",
+        "Vendakkai Fry"
+      ],
+      "extras": [
+        "Papadam",
+        "Coconut Chutney",
+        "Mango Pickle",
+        "Curd",
+        "Gunpowder with Ghee",
+        "Buttermilk"
+      ]
+    },
+    "Bengali": {
+      "base": [
+        "Steamed Rice",
+        "Luchi",
+        "Pulao",
+        "Khichuri",
+        "Bhaat"
+      ],
+      "dal": [
+        "Cholar Dal",
+        "Masoor Dal",
+        "Moong Dal Bhaja",
+        "Tetor Dal",
+        "Musurir Dal"
+      ],
+      "sabzi": [
+        "Begun Bhaja",
+        "Aloo Posto",
+        "Labra",
+        "Shukto",
+        "Chorchori",
+        "Dhokar Dalna"
+      ],
+      "extras": [
+        "Kasundi",
+        "Tomato Chutney",
+        "Papad Bhaja",
+        "Beguni",
+        "Cucumber Salad",
+        "Payesh"
+      ]
+    },
+    "Gujarati": {
+      "base": [
+        "Thepla",
+        "Rotli",
+        "Khichdi",
+        "Bajra Rotla",
+        "Bhakri",
+        "Sev Tameta Shaak"
+      ],
+      "dal": [
+        "Gujarati Dal",
+        "Kadhi",
+        "Tuver Dal",
+        "Mixed Dal",
+        "Dhokli Dal"
+      ],
+      "sabzi": [
+        "Shaak (Aloo Methi)",
+        "Undhiyu",
+        "Ringan Batata",
+        "Turia Patra",
+        "Bhindi Sambharo",
+        "Sev Bhaji"
+      ],
+      "extras": [
+        "Farsan",
+        "Chundo",
+        "Buttermilk",
+        "Pickled Chili",
+        "Sweet Mango Pickle",
+        "Shrikhand"
+      ]
+    },
+    "Maharashtrian": {
+      "base": [
+        "Bhakri",
+        "Steamed Rice",
+        "Chapati",
+        "Jowar Roti",
+        "Thalipeeth",
+        "Masala Bhaat"
+      ],
+      "dal": [
+        "Amti",
+        "Varan",
+        "Pithla",
+        "Matki Usal",
+        "Chana Dal",
+        "Moong Usal"
+      ],
+      "sabzi": [
+        "Batatyachi Bhaji",
+        "Zunka",
+        "Pithla",
+        "Flower Batata",
+        "Kothimbir Vadi",
+        "Baingan Bharta"
+      ],
+      "extras": [
+        "Thecha",
+        "Cucumber Raita",
+        "Lemon Pickle",
+        "Solkadhi",
+        "Kairi Chutney",
+        "Gulab Jamun"
+      ]
+    },
+    "Punjabi": {
+      "base": [
+        "Tandoori Roti",
+        "Rice",
+        "Naan",
+        "Aloo Paratha",
+        "Kulcha",
+        "Paneer Paratha"
+      ],
+      "dal": [
+        "Dal Makhani",
+        "Rajma",
+        "Chole",
+        "Masoor Dal",
+        "Kaali Dal",
+        "Moong Dal"
+      ],
+      "sabzi": [
+        "Palak Paneer",
+        "Baingan Bharta",
+        "Aloo Paratha",
+        "Gobhi Masala",
+        "Paneer Bhurji",
+        "Sarson Da Saag"
+      ],
+      "extras": [
+        "Lassi",
+        "Pickled Onion",
+        "Mint Chutney",
+        "Makhan",
+        "Gajar Halwa",
+        "Pudina Raita"
+      ]
+    }
+  }
+}
