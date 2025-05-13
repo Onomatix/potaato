@@ -1,0 +1,34 @@
+{
+  "name": "Potaato - Your Daily Indian Meal Picker",
+  "short_name": "Potaato",
+  "description": "A fun, free Indian meal planner app that suggests balanced combinations daily",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#e21b70",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/share-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "categories": ["food", "lifestyle", "utilities"],
+  "orientation": "portrait",
+  "prefer_related_applications": false
+} 
