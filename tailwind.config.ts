@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -67,13 +66,10 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				potaato: {
-					amber: '#F59E0B',
-					orange: '#EA580C',
-					green: '#84CC16',
-					yellow: '#EAB308',
-					brown: '#92400E',
-					cream: '#FEF3C7',
-					lightBrown: '#D97706',
+					cream: "#FFF5EA",
+					brown: "#8B4513",
+					lightBrown: "#CD853F",
+					pink: "#e21b70"  // Foodpanda-style pink
 				}
 			},
 			borderRadius: {

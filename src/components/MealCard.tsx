@@ -1,26 +1,72 @@
 import React, { useState } from 'react';
-import { Bean, Utensils, Soup } from 'lucide-react';
+import { Wheat, Bean, Salad, UtensilsCrossed } from 'lucide-react';
 import { Card } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
+import { useTranslation } from 'react-i18next';
+import { getFoodImage } from '@/utils/imageSearch';
+import { ColorScheme, combineClasses } from '@/utils/colorSchemes';
 
 interface MealItemProps {
   title: string;
   description: string;
   icon: React.ReactNode;
   isAnimating: boolean;
+  colorScheme: ColorScheme;
 }
 
-const MealItem: React.FC<MealItemProps> = ({ title, description, icon, isAnimating }) => {
+const MealItem: React.FC<MealItemProps> = ({ title, description, icon, isAnimating, colorScheme }) => {
+  const [error, setError] = useState(false);
+  const imageUrl = getFoodImage(description);
+
   return (
-    <div className={`meal-item flex flex-col items-center justify-center py-2 transition-all duration-500 ${isAnimating ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
-      <div className="mb-1 text-potaato-brown opacity-80 flex-shrink-0">
-        {icon}
+    <Card className={combineClasses(
+      `relative overflow-hidden transition-all duration-500 ${isAnimating ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`,
+      colorScheme.background
+    )}>
+      {/* Image Container */}
+      <div className="relative aspect-[4/3] overflow-hidden">
+        {!error ? (
+          <img
+            src={imageUrl}
+            alt={description}
+            className="w-full h-full object-cover"
+            onError={() => setError(true)}
+          />
+        ) : (
+          <div className={combineClasses(
+            "w-full h-full flex items-center justify-center",
+            `${colorScheme.accent} ${colorScheme.text}/70`
+          )}>
+            {React.cloneElement(icon as React.ReactElement, { size: 48 })}
+          </div>
+        )}
       </div>
-      <div className="flex-1 text-center">
-        <h3 className="text-base font-semibold text-potaato-brown leading-tight">{title}</h3>
-        <p className="text-potaato-brown/80 text-base leading-tight">{description}</p>
+      
+      {/* Content */}
+      <div className="p-4">
+        <div className="flex items-center gap-3">
+          <div className={combineClasses(
+            "flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center",
+            `${colorScheme.primary} text-white`
+          )}>
+            {React.cloneElement(icon as React.ReactElement, { size: 20 })}
+          </div>
+          <div>
+            <h3 className={combineClasses(
+              "text-lg font-semibold leading-tight mb-1",
+              colorScheme.text
+            )}>
+              {title}
+            </h3>
+            <p className={combineClasses(
+              "text-base leading-tight",
+              `${colorScheme.text}/80`
+            )}>
+              {description}
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
+    </Card>
   );
 };
 
@@ -32,10 +78,12 @@ interface MealCardProps {
     extra: string;
   };
   onRefresh: () => void;
+  colorScheme: ColorScheme;
 }
 
-const MealCard: React.FC<MealCardProps> = ({ meal, onRefresh }) => {
+const MealCard: React.FC<MealCardProps> = ({ meal, onRefresh, colorScheme }) => {
   const [isAnimating, setIsAnimating] = useState(false);
+  const { t } = useTranslation();
 
   const handleRefresh = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -47,44 +95,38 @@ const MealCard: React.FC<MealCardProps> = ({ meal, onRefresh }) => {
   };
 
   return (
-    <Card className="overflow-visible bg-white/80 backdrop-blur-sm shadow-md border-potaato-cream/50 rounded-3xl px-4 pt-6 pb-4 relative">
-      <h2 className="text-xl font-medium text-center mb-4 text-potaato-brown">Your meal for today:</h2>
-      <div className="grid grid-cols-2 gap-4 mb-8 min-h-[220px]">
+    <div className="space-y-6">
+      <div className="grid grid-cols-2 gap-4">
         <MealItem 
-          title="Grain" 
+          title={t('base')}
           description={meal.grain} 
-          icon={<Utensils size={44} strokeWidth={1.5} />} 
+          icon={<Wheat size={20} />} 
           isAnimating={isAnimating}
+          colorScheme={colorScheme}
         />
         <MealItem 
-          title="Dal" 
+          title={t('dal')}
           description={meal.dal} 
-          icon={<Bean size={44} strokeWidth={1.5} />} 
+          icon={<Bean size={20} />} 
           isAnimating={isAnimating}
+          colorScheme={colorScheme}
         />
         <MealItem 
-          title="Sabzi" 
+          title={t('sabzi')}
           description={meal.sabzi} 
-          icon={<Soup size={44} strokeWidth={1.5} />} 
+          icon={<Salad size={20} />} 
           isAnimating={isAnimating}
+          colorScheme={colorScheme}
         />
         <MealItem 
-          title="Extra" 
+          title={t('extras')}
           description={meal.extra} 
-          icon={<Bean size={44} strokeWidth={1.5} />} 
+          icon={<UtensilsCrossed size={20} />} 
           isAnimating={isAnimating}
+          colorScheme={colorScheme}
         />
       </div>
-     
-      <div className="mt-6">
-        <button
-          onClick={handleRefresh}
-          className="w-full bg-potaato-lightBrown text-white font-semibold text-lg py-4 px-6 rounded-full shadow-md transition-all transform hover:shadow-lg hover:bg-potaato-brown focus:outline-none"
-        >
-          What's for lunch?
-        </button>
-      </div>
-    </Card>
+    </div>
   );
 };
 
